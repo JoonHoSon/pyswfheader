@@ -6,6 +6,9 @@ import hexagonit.swfheader
 
 
 def main(string):
+    """
+    hexagonit 모듈을 이용해서 대표적인 정보를 추출한다.
+    """
     meta = hexagonit.swfheader.parse(string)
     list(sorted(meta.keys()))
     duration = meta['frames'] / meta['fps']
